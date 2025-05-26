@@ -1,0 +1,169 @@
+
+Delivered-To: shrutitiwadi1095@gmail.com
+Received: by 2002:a05:6000:1b8f:b0:38f:3fcc:a984 with SMTP id r15csp1461085wru;
+        Mon, 14 Apr 2025 07:17:19 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUDoajUMVV2vI15uGvs69GTheKxXOgYibEGJ+KczvznmjNoyOKGAxrkiSGmXDujnmy+cigPx7JQq/5Gnd+Mpvmu@gmail.com
+X-Received: by 2002:a05:690c:c11:b0:6fe:4ee5:a6d5 with SMTP id 00721157ae682-70549bceb1cmr279731187b3.0.1744640238766;
+        Mon, 14 Apr 2025 07:17:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1744640238; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iRzkWnJBwH3wbLXjJSOvXSGLUWKvxnbAh53ovFHZ+d5xpBYIb/H4/lS2wq7/Z/LTjN
+         nfvnsR3JJ/aQm1OKOgfiz2Wz6vJkkI9ue9aNk+cne48YxLSRF5RIzetrpeYHQ68qo1wK
+         6q6GCS283okj2yc9XoFVAhWlhVNaLhkFn6nGwnc5Qi0hGGo8h5u5z8fC32MqU2Jm6KQk
+         Dpo6+KcuPKQHF797L1pTRdMVsjbYZoVUlU3wrJeNwr1UoShfJ+XUuhG5iTj3m0dA/46t
+         ffulO0Aw2AwBsAnJwHbxDofPRCleV4WEcTbnYj7SJleRxFLf5+YXPzFtSlEYHbVi+Scu
+         Ht7w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=2c7cB2GDVvglXg0ubXmLFYRTyT7GFghAIRLPTDx03wA=;
+        fh=chEHISPAxociQEbCcYwv6v1bXkLCppOYLNgykhzDlzQ=;
+        b=QLP8z1kSIIw7f4UAxpKeSBvOpDdtjnjM1AS7GVJQnV15XVeBJCeLwdsV0AASpqe7nD
+         sW9NmjycX95f5VsMADbUwq9aZIfVLBkr+QKprAtbTKECeD/hKgotWUyEra0KCPEitJxH
+         ZGFHZ+OXXOZntzExsCYQ8rb2atvekWhpRGv+6GMvnXAda/wW1NIUdvvxCM/MmOmR5NZR
+         CjGbXYhGotCDDuiFKisjsZfTcrgCIhc8l8uECEl3qBJ8Bv4hujIMaurzTv+ZzFJKACgz
+         wn8rI8LJBhEtUu45yroy+u127D92jsjJvnkwb3DgwChhG/pNS84oevZMggwJef4ToxgZ
+         kdqA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=N1KdUPoz;
+       spf=pass (google.com: domain of hrtechedsol@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hrtechedsol@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <hrtechedsol@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-7053e2d4f45sor52877007b3.7.2025.04.14.07.17.18
+        (Google Transport Security);
+        Mon, 14 Apr 2025 07:17:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of hrtechedsol@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=N1KdUPoz;
+       spf=pass (google.com: domain of hrtechedsol@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hrtechedsol@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1744640238; x=1745245038; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=2c7cB2GDVvglXg0ubXmLFYRTyT7GFghAIRLPTDx03wA=;
+        b=N1KdUPozHYvhbJ60rQZM3H1Li9BXTe+Dg2dN3tvJA0Sbj4TNhiDgWeL8EK9LlyICCA
+         vSS1YK/GCxO89NEkB9vOOm67UMcqEeX3yNtRxhknkcl2b95VDTrPnFtWhl83VkjNfgXB
+         agUNk0pyN71rKPvP4MMJMeJXOb+pjfpudBr21KWt3Eg1fDS5um4HiW7HGHYkP+KbFfnd
+         0zDo0IEsG9TTGrXCpNCESSOBB8zLrYxgQ+SG2t/h/5BP/9Od4bw6ZF46LAWbT3QbYZPY
+         mwcv0AqD4TwPFyZuth4Snd0ZEYz0zswfz1WOCAYJop6Wh+xvVUXg1/8wz3Du9sgX3+Xw
+         YQ5Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1744640238; x=1745245038;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2c7cB2GDVvglXg0ubXmLFYRTyT7GFghAIRLPTDx03wA=;
+        b=YT+nU3FfQzMJ1Ggetmgq54kXb9QfrdKnXon4JJyoYJ863tbKpZueCfEtH4bxMtUU9N
+         e/J4QKFthZurgoE12ttdXfE+ZjRpgq7ev8106VlfwJ+0fWMcXiGK+/RmlR02EFkHUS1a
+         6W1f23d0IS1jf5tdL5xskzE7cf6vvB6+XKRBisyYJOmmquxU7e7g6bBCjsOUhzOl5fO0
+         z+no8HNRSxO9MBPGr5WaDoGCeS4120geN2Q8/nWsJzPHPN76mFBffX3cAyoYZQ/U8gMU
+         jVNljbrdFrz0B2kCD5owp9br7mxBRuS7lOamDluRqPsUL7qiqGTVr7Bhx37Yw+6GcH6Z
+         FcjQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU4DrnlAobzqBJ551ZASsozN+muyV7uJiPJRtdtzAsjlS7Q4/xaQFHNwdcVWDOo4jQRTr3BN6/rV7Txk/GxZyMhfA==@gmail.com, AJvYcCUIEHCr7B12Ugwob44TQFSfycus1itWO4wj09Rlt+F7YNEIo4z6dIdtPzHg+4/npv5EMTdxBVFuHfnHQ7TWKAGTKWL8IQ==@gmail.com, AJvYcCURa8Pv8zqRq3pVCwDNfckf3MouPZ74589KRa6/pSNkNpju7wQMYXnCvboccTKYU7bzNrWSKhla71d+YBquWSqLfA==@gmail.com, AJvYcCUeIzKrzi1ozLQAvJsqPINK6qFeZ3SgBpQ2sgZRJmdv8ypQNb6bG9m0hSssQd/pPLm+TIpnnQMEDoH4xdW2S7ygUBc=@gmail.com, AJvYcCUi/bgXvk1YiwItEqysJNZxfugqLw7k1EZ/U0HWCCCSzFISVr+0oz/AWSI9IutBIR6cxf+1jBQ/ut5Kxi6H2ywduQ==@gmail.com, AJvYcCV11bQnQEbnHQyyitFx2LP5VdjVVlYp/hSeO0zP6fa8ZXuGUroDlTxMM1IIF4FfFjzVhXAKiw8oBVE=@gmail.com, AJvYcCV4rQeywm89WTbzE0CwvFJU0ft4ngtltJyCcNzkPd+KQOHpraMiEw7TP0QCrUWmJi7lxzbe+OGv31TNYuJhQNKQ+nOM@gmail.com, AJvYcCVGXkvllbABmTjJfMIynC+fZlukCISSxfEwCGXbVfN/fUBYGH3vjQWw+4FWY0tLx94PJtlqKXeQBkTl9NO1KVZa@gmail.com, AJvYcCVYt9DER/PWMtOeLD8R1mIWliQv6XtEaPetVD9vOVSTZHwJn2LOWvNkLLMqJtDT/siPLyV3YKOzQzXT9WzDfw8=@gmail.com, AJvYcCVZf3rqmQfKUBjBYxyjY+JYs47wM+n+zp/WIOvmYjOTZHkWCQ3k0QmX1L5dF1HNiy1cCzjEqBxOgdLiCA==@gmail.com, AJvYcCVmIrMyGJRWel7BtnyU4t5eCb+UmHk30wiE7/OJ1VkM+YFemXjyNPXQSjoCWUu4FcHGPFzEo7j6SanOlHdUzwrUrNUMJtKR@gmail.com, AJvYcCVqIwzR3MVZGlwxLTs+z7R2lqYFD8StQoNiez6+PT1q1To1Au2X831YyQmwGSPGxXCeLTRi1iBecATvCpsVA7mJN2/B6A==@gmail.com, AJvYcCXs77UWRSfR4o6GaLDOhmEAWWtVt6DK6LjBsfJQqlhMCsiNetaP3Vi6f1DhhVBOyTOTD5q0XRCbuB+czup0O3w=@gmail.com
+X-Gm-Message-State: AOJu0YxLor/hRHAbuRIdIQ8QuMpwMiW34am6AU9ZvemDsy4yixkltgEi pgYK/UIuwazsExCzRwqWBk9mpS5xyXUK09uGF4P76z0Ky4mgR4cSEGM5jUxpvHeDoW7fsdCMl4J FwYQaxZkrQJVWp/Dkk8vfPuapI9Y=
+X-Gm-Gg: ASbGncuWR2I/mPiROqHaI9hF6TdoOflMQZOL19Ufv9pWPW2N5P53SCCGBE4qzQHK6R2 Lc3EEjYvcnx5Cw8lcGMV06WmTGe1iEz07KQmVNBuep+3VL4aWhZd6bNbwj5S9gIqbHv2GLsesoS LHEcbTwylUGIaXFv9fIdyS1eV9QLEu8PRcgL0=
+X-Google-Smtp-Source: AGHT+IEmes15O3yLxFhv9n/wpU3BqS3n32/dSxYt5fX26Dt5nhhzXwVQIWyOzGHy4ilS7FXlwxkvEa0hAB07qf13q+A=
+X-Received: by 2002:a05:690c:7485:b0:702:66cd:10be with SMTP id 00721157ae682-7054a13ca7dmr307920817b3.14.1744640236733; Mon, 14 Apr 2025 07:17:16 -0700 (PDT)
+MIME-Version: 1.0
+From: "hr.teched sol" <hrtechedsol@gmail.com>
+Date: Mon, 14 Apr 2025 19:47:05 +0530
+X-Gm-Features: ATxdqUGX5raZxpBCQB6GJVkYvVAHM8X26FaMRVmN8ji7ee6cUHn6xmojpPVJaxM
+Message-ID: <CALWRbn2B=oWJwk_=GpvoZgiso9Rym+MRgdvbovtGn_bkTR77Vw@mail.gmail.com>
+Subject: 🎯 CAMPUS AMBASSADOR INTERNSHIP Opportunity – 2025 | Tech Ed Solutions
+To: reddybvyshnavi@gmail.com, Abhishek Pandit <abhishek.pandit1120@gmail.com>, nishant1354.be23@chitkarauniversity.edu.in, SUBIR SARKAR <subirsarkar6494@gmail.com>, darshanpatole49@gmail.com, Tanvi keerti Boyina <tanvikeertiboyina@gmail.com>, Anusha M <anusha.manjunath31@gmail.com>, Rupali Kandrup <kandruprupali@gmail.com>, Siddhi Hajari <SIDDHIPHAJARI@gmail.com>, venkatrohithb@gmail.com, Vasu 5087 <vasuromans47630@gmail.com>, apoorva.b2k@gmail.com, Teena Teena <teenabiradar@gmail.com>, kalyanthota508@gmail.com, Suresh Nalla <sureshnalla175@gmail.com>, vyshnavi amara <amaravyshnavi@gmail.com>, Thanu Sri Samala <thanusrisamala@gmail.com>, akshusankati26@gmail.com, pbammidi2@gitam.in, sharmila.ladi12@gmail.com, Tejaswini Surjuse <tejaswinisurjuse373@gmail.com>, harshitha sri peethani <harshithasri.p2004@gmail.com>, Ch.kavya885@gmail.com, Puram Venkatadri <puramvenkatadri@gmail.com>, Garima <garimaaa.33@gmail.com>, Rocky Sekhar <sekharrocky.mr123@gmail.com>, "K. S." <shivaganeshkasani@gmail.com>, Abhishek Solabannavar 2 <abhisheksolabannavar@gmail.com>, danammani488@gmail.com, Ashala Lokesh <ashalalokesh7@gmail.com>, siddukodam890@gmail.com, yash_ Patel755 <yashpatel755204@gmail.com>, suhanibatra05@gmail.com, Nukta Kaushal <Kaushalnukta@gmail.com>, saniyabintnaseeruddin@gmail.com, lopamudraghosh53@gmail.com, swatisirmour123@gmail.com, Maria Swetha <marybasilica2004@gmail.com>, 238r5a6205@cmrec.ac.in, pragathih2004@gmail.com, Insiya Bhanpurawala <bhanpurawalainsiyah7290@gmail.com>, shrutijain07808@gmail.com, profcarlsy@gmail.com, Sangram Patil <sangrampatil5255@gmail.com>, neerajbapat0113@gmail.com, Amrutavitekar789@gmail.com, Diya Lahoti <diyalahoti2211@gmail.com>, pachade2@gmail.com, Stutichavan05@gmail.com, Shubham Shitole <shubh07m@gmail.com>, toshan.dandi5@gamil.com, sarthak pagar <sarthakpagar333@gmail.com>, Dhawal Malu <dhawalm25@gmail.com>, Kudzai Ganda <gandakudzai@gmail.com>, shivanitorase@gmail.com, Anushka Sinha <sinhaanushka005@gmail.com>, Sahilvilaswagh8611@gmail.com, AYYMAN SHAIKH <ayymanshaikh2@gmail.com>, Ridhiman Kamboj <ridhimankamboj99@gmail.com>, Ummesalama Abbas <ummesalama2005u@gmail.com>, Nia Gathani <niagathani@gmail.com>, dipendrathakur978@gmail.com, Shlok Devi <shlok.devi27@gmail.com>, Gautam Singh <gautamgra.123@gmail.com>, Adarsh Choudhary <adarshchoudhary677@gmail.com>, anirudhiyerofficial@gmail.com, darshana bora <Darshanaabora@gmail.com>, Rijuta Landge <landgerijuta@gmail.com>, "Àditya Patil" <adityapatil1352003@gmail.com>, Nikhil Thorat <thoratnikhil1009@gmail.com>, Shreya Kahane <shreyakahane22@gmail.com>, Stinky Toe <gaurav.hukk4445@gmail.com>, Asmi Ostwal <asmiostwal@gmail.com>, kushcshah14115@gmail.com, Reeva Shah <reevashah288@gmail.com>, Jay Shah <jaymshah2407@gmail.com>, Dolly Jain <dollyjain251o@gmail.com>, Jhalak Mutha <Jhalakmutha@gmail.com>, Vidhi Bafna <vidhibafna16@gmail.com>, Swapnil Uplenchwar <swapniluplenchwar@gmail.com>, Laxmi Zalake <laxmizalake0706@gmail.com>, Nupur Nalamwar <nupurnalamwar@gmail.com>, pranavkudkyal07@gmail.com, Chetana Shivale <chetana.shivale100@gmail.com>, Akshad Kolapkar <kolapkarakshad05@gmail.com>, 31232512@vupune.ac.in, savri patil <savripatil926@gmail.com>, Joseph <joseph.jagtap15@gmail.com>, Smruti Choudhary <smrutichoudhary01@gmail.com>, Dhruvi Jain <jaindhruvi2020@gmail.com>, Vallabh Kulkarni <kvallabh387@gmail.com>, fegdepratiksha@gmail.com, vedantsavale2@gmail.com, Gauri Wankhade <gauriwankhade1951@gmail.com>, Saif Shaikh <saifshaikh9549@gmail.com>, Snehal kalburgi <snehalkalburgi2004@gmail.com>, Vedant Pandhare <vedantpandhare007@gmail.com>, vaishnavi Malusare <malusarevaishnavi2@gmail.com>, mr.sadare0814@gmail.com, preetilatta164@gmail.com, Shivam Deshmukh <shivamdeshmukh122@gmail.com>, kartikgore24@gmail.com, Sohel Gajbhiye <sohelgajbhiye001@gmail.com>, Darshil patil <darshilpatil103@gmail.com>, Ajay krishnan <k.ajaykrishnan575@gmail.com>, jaideepsrikakulapu04@gmail.com, karthikeya tatikonda <Karthikeyatatikonda@gmail.com>, ashritha v <vashritha2005@gmail.com>, Mani Chandhan <manichandhan05@gmail.com>, Deepak N <nagarajank14111974@gmail.com>, TANUJA MADDELA <tanujamaddela@gmail.com>, SIDHARDH S <Sidhardh215@gmail.com>, saibabu16.javvaji@gmail.com, bharani.vejendla@gmail.com, btanmay8204@gmail.com, Apsana Attar <attar.apsana15@gmail.com>, Noharshi Boddu <noharshiboddu@gmail.com>, R SAI SUMANTH REDDY ramireddy <saisumanthramireddy@gmail.com>, Lakshmanaprasad Konduru <lakshmanaprasad245@gmail.com>, Murali Machineni <muralimachineni4@gmail.com>, Abhishek Senthil <abhisheksenthil20@gmail.com>, Kurnisai Shekar <kurnisaishekar@gmail.com>, Purushothaman M <mpurushoth7044@gmail.com>, Samriti Raj <samritiraj4@gmail.com>, Bharath reddy 3381 <bharathreddy3381@gmail.com>, saideepkoneru@gmail.com, Hrishi koushal <hrishikoushal2006@gmail.com>, Thillai M <thillai19june@gmail.com>, udantreddy.lr@gmail.com, vvvss rohit <vvvssrohit@gmail.com>, Karthikthalluri74@gmail.com, ganideveloper1@gmail.com, karanam chinmayee <chinmayeekaranam2005@gmail.com>, Pranathi Reddy <Pranathireddy084@gmail.com>, Yasaswi <yasaswi697@gmail.com>, thorajmamidala@outlook.com, adya.22bce8103@vitapstudent.ac.in, jprajwala2005@gmail.com, subhashvuriti265@gmail.com, MANJUNADH Bhavaraju <manjunadhbhavaraju@gmail.com>, ksaianudeep1@gmail.com, manojs20041204@gmail.com, Rahul Dosapati <rahuldosapati2005@gmail.com>, Praveena Podili <Vemuripraveena2226@gmail.com>, Sathya Gnanesh Juturu <juturusathyagnanesh@gmail.com>, daivalaharshitha@gmail.com, Vaseem Aabid <vaseemaabid086@gmail.com>, Sahid Ahmed <sahidahmed7703@gmail.com>, kahureketaki@outlook.com, prajwalashok23@gmail.com, xenon10mayank@gmail.com, pujithamule158@gmail.com, Divyanshu Raj <rajdivyanshu1213@gmail.com>, janhvi.22bce8544@vitapstudent.ac.in, Shruti Gugilwar <Shrutisgugilwar@gmail.com>, nandanaskrishna0307@gmail.com, bhanodai 10 <bhanodai10@gmail.com>, Manasa Kondapalli <manasakondapalli1614@gmail.com>, Adithya Kumar <adithyakumark166@gmail.com>, debashishofficial17@gmail.com, jaswanthsalkapuramndl@gmail.com, Mittinti.keerthana@gmail.com, Vishnu Vardan <vishnuvardan2004@gmail.com>, Pujita Lakshman <pujitalakshman@gmail.com>, shrutitiwadi1095@gmail.com, abhi suragana <abhisuragana1605@gmail.com>, Rishidhar Mamidala <rishidharmamidala18@gmail.com>, SATYA SAHIL <sahho.7586@gmail.com>, Rishi Guptha Neelisetty <rishi2002guptha@gmail.com>, Ankita Tiwary <ankitatiwary33@gmail.com>, dhanunjayachalla49@gmail.com, Swayam Tandon <sswayam3@gmail.com>
+Content-Type: multipart/related; boundary="00000000000092a1ed0632bdb546"
+
+--00000000000092a1ed0632bdb546
+Content-Type: multipart/alternative; boundary="00000000000092a1ec0632bdb545"
+
+--00000000000092a1ec0632bdb545
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+GREETING STUDENTS
+
+I HOPE EVERYONE IS DOING WELL.
+
+TECH IS AN RENOVED PLATFORM WITH THE COLLABORATION WITH GOOGLE FOR
+EDUCATION, INFOSYS, AICTE, AND MANY MORE MNC COMPANIES IS  NOW HIRING
+CAMPUS AMBASSADORS IN SRM
+
+ Looking to break into marketing and build a powerful professional profile?
+
+Join *Tech Ed Solutions* as a *Marketing Intern & Campus Ambassador* and
+take the first step toward a successful career! =F0=9F=9A=80
+
+=F0=9F=92=BC *Why You Should Apply:*
+=E2=9C=85 *Official Offer Letter* =E2=80=93 Secure your spot with a formal =
+offer
+=F0=9F=92=B0 *Stipend up to =E2=82=B915,000/- to 25,000/-* =E2=80=93 Get re=
+warded for your
+efforts(BASED ON PERFORMANCE)
+=F0=9F=93=9C *Certificate of Internship* =E2=80=93 Add value to your resume
+=F0=9F=8F=85 *Letter of Recommendation* =E2=80=93 Stand out in future appli=
+cations
+
+=F0=9F=94=91 *Role: Campus Ambassador*
+As our face on your campus, you=E2=80=99ll:
+=F0=9F=93=A3 Promote our programs & internships
+=F0=9F=8C=90 Build your network and personal brand
+=F0=9F=8E=AF Develop real-world marketing skills
+=F0=9F=A4=9D Lead and grow your community
+
+This is more than just an internship =E2=80=93 it=E2=80=99s a launchpad for=
+ your career.
+
+Let=E2=80=99s grow, learn, and win together! =F0=9F=8C=9F
+
+=F0=9F=93=A9 *Apply Now* =E2=80=93 Your journey starts here
+
+*https://forms.gle/xvf4vvFkATMX2idg7 <https://forms.gle/xvf4vvFkATMX2idg7>*
+
+[image: ca,pus .PDF (6).png]
+
+--00000000000092a1ec0632bdb545
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">GREETING STUDENTS<div><br></div><div>I HOPE EVERYONE IS DO=
+ING WELL.</div><div><br></div><div>TECH IS AN RENOVED PLATFORM WITH THE COL=
+LABORATION=C2=A0WITH GOOGLE FOR EDUCATION, INFOSYS, AICTE, AND MANY MORE MN=
+C COMPANIES IS=C2=A0 NOW HIRING CAMPUS AMBASSADORS IN SRM</div><div><br></d=
+iv><div>=C2=A0Looking to break into marketing and build a powerful professi=
+onal profile?</div><div><p>Join=C2=A0<strong>Tech Ed Solutions</strong>=C2=
+=A0as a=C2=A0<strong>Marketing Intern &amp; Campus Ambassador</strong>=C2=
+=A0and take the first step toward a successful career!=C2=A0=F0=9F=9A=80</p=
+><p>=F0=9F=92=BC=C2=A0<strong>Why You Should Apply:</strong><br>=E2=9C=85=
+=C2=A0<strong>Official Offer Letter</strong>=C2=A0=E2=80=93 Secure your spo=
+t with a formal offer<br>=F0=9F=92=B0=C2=A0<strong>Stipend up to =E2=82=B91=
+5,000/- to 25,000/-</strong>=C2=A0=E2=80=93 Get rewarded for your efforts(B=
+ASED ON PERFORMANCE)<br>=F0=9F=93=9C=C2=A0<strong>Certificate of Internship=
+</strong>=C2=A0=E2=80=93 Add value to your resume<br>=F0=9F=8F=85=C2=A0<str=
+ong>Letter of Recommendation</strong>=C2=A0=E2=80=93 Stand out in future ap=
+plications</p><p>=F0=9F=94=91=C2=A0<strong>Role: Campus Ambassador</strong>=
+<br>As our face on your campus, you=E2=80=99ll:<br>=F0=9F=93=A3=C2=A0Promot=
+e our programs &amp; internships<br>=F0=9F=8C=90=C2=A0Build your network an=
+d personal brand<br>=F0=9F=8E=AF=C2=A0Develop real-world marketing skills<b=
+r>=F0=9F=A4=9D=C2=A0Lead and grow your community</p><p>This is more than ju=
+st an internship =E2=80=93 it=E2=80=99s a launchpad for your career.</p><p>=
+Let=E2=80=99s grow, learn, and win together!=C2=A0=F0=9F=8C=9F</p><p>=F0=9F=
+=93=A9=C2=A0<strong>Apply Now</strong>=C2=A0=E2=80=93 Your journey starts h=
+ere</p><p><b style=3D"background-color:rgb(0,255,255)"><a href=3D"https://f=
+orms.gle/xvf4vvFkATMX2idg7" target=3D"_blank">https://forms.gle/xvf4vvFkATM=
+X2idg7</a></b></p><br></div><img src=3D"cid:ii_m9gr5ree1" alt=3D"ca,pus .PD=
+F (6).png" width=3D"142" height=3D"201" class=3D"gmail-CToWUd" style=3D"mar=
+gin-right: 0px;"></div>
+
+--00000000000092a1ec0632bdb545--
+--00000000000092a1ed0632bdb546
+Content-Type: image/png; name="ca,pus .PDF (6).png"
+Content-Disposition: inline; filename="ca,pus .PDF (6).png"
+Content-Transfer-Encoding: base64
+Content-ID: <ii_m9gr5ree1>
+X-Attachment-Id: ii_m9gr5ree1
+
+
+--00000000000092a1ed0632bdb546--
